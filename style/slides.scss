@@ -228,8 +228,10 @@ $white: #ffffff;
   height: 90%;
 }
 
-/* Remove the footer link underline */
-.reveal .footer a[href] {
+/* Remove the link underline for the slide numbers, footer and home button */
+.reveal .footer a[href],
+.slide-number a[href],
+.slide-menu-button a[href] {
   background-image: none;
   color: #8f8f8f;
   text-decoration: none;
