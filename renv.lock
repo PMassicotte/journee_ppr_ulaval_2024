@@ -1100,6 +1100,11 @@
       ],
       "Hash": "680ad542fbcf801442c83a6ac5a2126c"
     },
+    "magick": {
+      "Package": "magick",
+      "Version": "2.8.4",
+      "Source": "Repository"
+    },
     "magrittr": {
       "Package": "magrittr",
       "Version": "2.0.3",
