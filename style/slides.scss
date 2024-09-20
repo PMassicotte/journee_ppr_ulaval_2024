@@ -244,3 +244,22 @@ $white: #ffffff;
   max-width: 200px !important;
   max-height: 200px !important;
 }
+
+/* Date format on the title slide */
+.date {
+  color: #6f6f6f;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+/* Italic subtitle on the title slide */
+#title-slide .subtitle,
+div.reveal div.slides section.quarto-title-block .subtitle {
+  font-style: italic;
+  font-weight: bolder;
+}
+
+/* Author on the title slide */
+.reveal .quarto-title-block .quarto-title-authors .quarto-title-author {
+  color: #6f6f6f;
+}

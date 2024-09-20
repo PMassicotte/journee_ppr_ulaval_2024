@@ -1,8 +1,10 @@
 ---
 title: "Data Management Best Practices"
-subtitle: "La journée IID des professionnel.le.s de Recherche affiliés à l'ULaval"
+subtitle: "Journée IID des professionnels et professionnelles de recherche affiliés à l’Université Laval sur la gestion et l’usage des données de recherche"
 author: "Philippe Massicotte"
 institute: "Laval University"
+date: "2024-11-26"
+date-format: long
 title-slide-attributes:
   data-background-size: 100% 100%
   data-background-position: 100% 100%
@@ -19,7 +21,7 @@ format:
     logo: https://sdrds.org/sites/sdrds/files/2020-02/iid-bleu.png
 
 execute:
-  echo: true
+  echo: false
 ---
 
 ```{r}
@@ -60,7 +62,7 @@ theme_update(
 
 ::: {.center-align}
 
-![](img/myname.png){width=600}
+![](img/myname.png){width=600 fig-alt="Badge showing the name of the presenter (Philippe Massicotte)."}
 
 :::
 
@@ -149,7 +151,7 @@ This likely means that:
 
 ::: {.column width=50%}
 
-![](img/ai/old_school_lab.jpeg){width=800}
+![](img/ai/old_school_lab.jpeg){width=800 fig-alt="Old-school laboratory"}
 
 :::
 
@@ -171,7 +173,7 @@ When you depend on profit companies.
 
 ::: {.column width=50%}
 
-![](img/ai/old_school_microscope.jpeg){width=600}
+![](img/ai/old_school_microscope.jpeg){width=600 fig-alt="Old-school microscope"}
 
 :::
 
@@ -220,7 +222,7 @@ This dataset contains 4 variables (columns). [The first line generally contains 
 
 [A comma-separated values file (`.csv`).]{.smaller}
 
-![](./img/screenshots/penguins_csv_format.png)
+![](./img/screenshots/penguins_csv_format.png){fig-alt="Screenshot of a CSV file with the content of the Palmer penguins dataset"}
 
 :::
 
@@ -228,7 +230,7 @@ This dataset contains 4 variables (columns). [The first line generally contains 
 
 [A tabs separated values file (`.tsv`).]{.smaller}
 
-![](./img/screenshots/penguins_tsv_format.png)
+![](./img/screenshots/penguins_tsv_format.png){fig-alt="Screenshot of a TSV file with the content of the Palmer penguins dataset"}
 
 :::
 
@@ -328,6 +330,7 @@ Create your own GeoJSON file online at [https://geojson.io/](https://geojson.io/
 #| crop: true
 #| dev: ragg_png
 #| fig.cap: "Data: [https://bit.ly/2pAjOAr](https://bit.ly/2pAjOAr)"
+#| fig-alt: "The outline of the Colosseum amphitheatre in Rome created using a geojson file."
 url <-
   "https://github.com/Robinlovelace/Creating-maps-in-R/raw/master/data/test-multifeature.geojson"
 sf <- sf::st_read(url, quiet = TRUE)
@@ -356,7 +359,7 @@ sf |>
 
 ::: {.center-align}
 
-![](img/ai/geotiff.jpeg){width=600}
+![](img/ai/geotiff.jpeg){width=600 fig-alt="AI generated image of a computer screen showing some scifi images."}
 
 :::
 
@@ -370,6 +373,7 @@ A GeoTIFF can contain information such as the Sea Surface Temperature (SST).
 #| fig-format: png
 #| crop: true
 #| fig-dpi: 300
+#| fig-alt: "Sea Surface Temperature (SST) in the St-Lawrence River."
 #| out-width: 75%
 poly <- read_sf('{
   "type": "FeatureCollection",
@@ -562,7 +566,7 @@ It is much easier to work with _spatial data_:
 
 ::: {.center-align}
 
-![Laptop showing a file explorer with files badly named.](img/excalidraw/files_naming.png){width=70%}
+![](img/excalidraw/files_naming.png){width=70% fig-alt="Laptop showing a file explorer with files badly named."}
 
 :::
 
@@ -581,7 +585,7 @@ Why using special characters and spaces is a bad idea.
 
 ::: {.center-align}
 
-![](img/screenshots/invalid_multibyte_string.png){width=80%}
+![](img/screenshots/invalid_multibyte_string.png){width=80% fig-alt="Screenshot showing an error message in R when trying to read a file with a special character."}
 
 :::
 
@@ -600,7 +604,7 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 - For example, use `0001`, `0002`, `1001` instead of `1`, `2`, `1001`.
 
 ::: {.center-align}
-![](img/excalidraw/files_sorting.png)
+![](img/excalidraw/files_sorting.png){fig-alt="Image showing how files are sorted in a file explorer."}
 :::
 
 ## When file naming goes wrong!
@@ -609,7 +613,7 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 
 ::: {.column width=50%}
 
-![Source: <a href="https://bit.ly/2M8cViI">https://bit.ly/2M8cViI</a>](img/screenshots/python_file_naming.png)
+![Source: <a href="https://bit.ly/2M8cViI">https://bit.ly/2M8cViI</a>](img/screenshots/python_file_naming.png){fig-alt="Screenshot of a scientific taking his heaad in his hands and sitting at a desk."}
 
 :::
 
@@ -628,7 +632,7 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 Data files were sorted differently depending on the operating system where the Python scripts were executed.
 
 ::: {.center-align}
-![Original image from: Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).](img/excalidraw/files_sorting2.png){width=60%}
+![Original image from: Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).](img/excalidraw/files_sorting2.png){width=60% fig-alt="Image showing how files are sorted in a file explorer on Windows and Linux."}
 
 :::
 
@@ -708,7 +712,11 @@ Basic recommendations to preserve the raw data for future use:
 
 If a script changes the content of a raw data file and [saves it in the same file, likely, the script will not work the second time because the structure of the file has changed]{.emphasize}.
 
-![Image showing that data can change after the data is cleaned.](img/excalidraw/keep_raw_data_raw_01.png){.r-stretch}
+::: {.center-align}
+
+![](img/excalidraw/keep_raw_data_raw_01.png){width=80% fig-alt="Image showing that data can change after the data is cleaned. The column name is separated into two columns firstname and lastname."}
+
+:::
 
 ## Project directory structure
 
@@ -726,13 +734,17 @@ If a script changes the content of a raw data file and [saves it in the same fil
 
 ## Project directory structure
 
-![Image showing how I do organize my files in a data project.](img/excalidraw/project_structure.png){.r-stretch}
+::: {.center-align}
+
+![](img/excalidraw/project_structure.png){width=60% fig-alt="Schematic showing a project directory structure."}
+
+:::
 
 # Tidy data {background-color="#2C404A"}
 
 ::: {.center-align}
 
-![](img/ai/tidydata.jpeg){width=700}
+![](img/ai/tidydata.jpeg){width=700 fig-alt="AI generated image of a book and pencils on a desk."}
 
 :::
 
@@ -750,7 +762,7 @@ If a script changes the content of a raw data file and [saves it in the same fil
 
 ::: {.center-align}
 
-![Artwork by <a href="https://twitter.com/allison_horst?s=20">@allison_horst</a>](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_3.jpg){width=50%}
+![Artwork by <a href="https://twitter.com/allison_horst?s=20">@allison_horst</a>](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_3.jpg){width=60% alt-text="On the left is a happy cute fuzzy monster holding a rectangular data frame with a tool that fits the data frame shape. On the workbench behind the monster are other data frames of similar rectangular shape, and neatly arranged tools that also look like they would fit those data frames. The workbench looks uncluttered and tidy. The text above the tidy workbench reads “When working with tidy data, we can use the same tools in similar ways for different datasets…” On the right is a cute monster looking very frustrated, using duct tape and other tools to haphazardly tie data tables together, each in a different way. The monster is in front of a messy, cluttered workbench. The text above the frustrated monster reads “...but working with untidy data often means reinventing the wheel with one-time approaches that are hard to iterate or reuse."}
 
 :::
 
@@ -760,7 +772,7 @@ The main idea is that data should be organized in columns with [each column repr
 
 ::: {.center-align}
 
-![Artwork by <a href="https://twitter.com/allison_horst?s=20">@allison_horst</a>](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_1.jpg){width=70%}
+![Artwork by <a href="https://twitter.com/allison_horst?s=20">@allison_horst</a>](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_1.jpg){width=70% fig-alt="Stylized text providing an overview of Tidy Data. The top reads “Tidy data is a standard way of mapping the meaning of a dataset to its structure. - Hadley Wickham.” On the left reads “In tidy data: each variable forms a column; each observation forms a row; each cell is a single measurement.” There is an example table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for different cats, illustrating tidy data structure."}
 
 :::
 
@@ -776,7 +788,7 @@ The main idea is that data should be organized in columns with [each column repr
 
 ::: {.center-align}
 
-![Image showing a frequent method to enter count data in spreadsheet software.](img/excalidraw/species_wide.png){width=70%}
+![](img/excalidraw/species_wide.png){width=70% fig-alt="Image showing a frequent method to enter count data in spreadsheet software."}
 
 :::
 
@@ -786,7 +798,7 @@ After proper transformations, the data is now tidy ([or in normal form](https://
 
 ::: {.center-align}
 
-![Image showing a frequent method to enter count data in spreadsheet software.](img/excalidraw/species_wide_to_long.png)
+![](img/excalidraw/species_wide_to_long.png){width=90% fig-alt="Image showing a frequent method to enter count data in spreadsheet software."}
 
 :::
 
@@ -796,7 +808,7 @@ If you use a spreadsheet program, [keep your data arranged as rectangular tables
 
 ::: {.center-align}
 
-![](img/ai/spreadsheet.jpeg){width=800}
+![](img/ai/spreadsheet.jpeg){width=800 fig-alt="AI generated image of a piece of paper showing a spreadsheet."}
 
 :::
 
@@ -810,7 +822,7 @@ These two examples show the same data. One is arranged as two tables whereas the
 
 This sheet has one table.
 
-![Data in a computer spreadsheet program.](img/screenshots/data_rectangle1.png)
+![](img/screenshots/data_rectangle1.png){fig-alt="Data in a computer spreadsheet program with one block of data."}
 
 :::
 
@@ -818,7 +830,7 @@ This sheet has one table.
 
 This sheet has two tables.
 
-![Data in a computer spreadsheet program.](img/screenshots/data_rectangle2.png){height=50%}
+![](img/screenshots/data_rectangle2.png){height=50% fig-alt="Data in a computer spreadsheet program with two blocks of data."}
 
 :::
 
@@ -828,13 +840,13 @@ This sheet has two tables.
 
 Do not be that person 😩😖😠😤💢😣🤦‍♀️🤦‍♂️😑😓
 
-![Data in a computer spreadsheet program.](img/screenshots/data_rectangle3.png){.r-stretch}
+![](img/screenshots/data_rectangle3.png){.r-stretch fig-alt="Data in a computer spreadsheet program. Data is not arranged in a rectangle table and there is a geographic placed inside the sheet."}
 
 # Variable names {background-color="#2C404A"}
 
 ::: {.center-align}
 
-![](img/ai/variable_names.jpeg){width=800}
+![](img/ai/variable_names.jpeg){width=800 fig-alt="AI generated image of a cartoonish man in front of what looks like a computer with variable names on the screen."}
 
 :::
 
@@ -915,6 +927,8 @@ Do not be that person 😩😖😠😤💢😣🤦‍♀️🤦‍♂️😑😓
 In this example, we see that there is an outlier in the data. Measuring device fault? Manual entry error?
 
 ```{r}
+#| label: histogram
+#| fig-alt: "Histogram of air temperature. A histogram is an accurate representation of the distribution of numerical data. Here we can observe that there is an outlier in the data."
 df <- read_csv("https://raw.githubusercontent.com/tidyverse/tidyr/master/vignettes/weather.csv")
 
 df <- df |>
@@ -967,7 +981,7 @@ df |>
 
 ::: {.center-align}
 
-![](img/ai/hd_fail.jpeg){width=800}
+![](img/ai/hd_fail.jpeg){width=800 fig-alt="AI generated image of a hard drive failing with a person crying because of loosing data."}
 
 :::
 
@@ -1087,7 +1101,7 @@ There are at least two different ways to make your data available:
 
 [The Directory of Open Access Journals](https://www.doaj.org/) is useful to search for open access journals.
 
-![](img/doaj_logo.png){.r-stretch}
+![](img/logo/doaj_logo.png){.r-stretch fig-alt="Directory of Open Access Journals logo. The logo has three shapes on the left side and the text 'DOAJ' on the right side."}
 
 ## Public announcement {{< fa bullhorn >}}
 
@@ -1097,7 +1111,7 @@ There are at least two different ways to make your data available:
 
 ::: {.center-align}
 
-![](https://media.giphy.com/media/j9Y9vsklHWtjgHOtLk/giphy.gif){width=800}
+![](https://media.giphy.com/media/j9Y9vsklHWtjgHOtLk/giphy.gif){width=800 fig-alt="GIF showing a person throwing a book over his shoulder."}
 
 :::
 
@@ -1124,7 +1138,7 @@ A data paper is similar to a traditional scientific paper.
 
 ::: {.center-align}
 
-![](img/screenshots/essd.png){width=50%}
+![](img/screenshots/essd.png){width=50% fig-alt="Screenshot of the Earth System Science Data journal with an article featuring many authors."}
 
 :::
 
@@ -1134,7 +1148,7 @@ The data associated with the paper is available online with an associated DOI.
 
 ::: {.center-align}
 
-![](img/screenshots/seanoe.png){width=50%}
+![](img/screenshots/seanoe.png){width=50% fig-alt="Screenshot of the Seanoe website showing a dataset with a DOI."}
 
 :::
 
@@ -1145,6 +1159,7 @@ The data associated with the paper is available online with an associated DOI.
 #| fig-width: 12
 #| fig-height: 7
 #| fig.cap: "Number of downloads per country for each dataset."
+#| fig-alt: "Bar plot showing the number of downloads per country for each dataset."
 url <- pins::board_url(
   list(seanoe = "https://www.seanoe.org/html/stat/2022/uj4mfvvquq-philippemassicottetakuvikulavalca.xls")
 )

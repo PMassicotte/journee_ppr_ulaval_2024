@@ -13,6 +13,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="Philippe Massicotte">
+  <meta name="dcterms.date" content="2024-11-26">
   <title>Data Management Best Practices</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -394,7 +395,7 @@
 
 <section id="title-slide" data-background-position="100% 100%" data-background-size="100% 100%" class="quarto-title-block center">
   <h1 class="title">Data Management Best Practices</h1>
-  <p class="subtitle">La journée IID des professionnel.le.s de Recherche affiliés à l’ULaval</p>
+  <p class="subtitle">Journée IID des professionnels et professionnelles de recherche affiliés à l’Université Laval sur la gestion et l’usage des données de recherche</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -407,11 +408,12 @@ Philippe Massicotte
     </div>
 </div>
 
+  <p class="date">November 26, 2024</p>
 </section>
 <section class="slide level2">
 
 <div class="center-align">
-<p><img data-src="img/myname.png" width="600"></p>
+<p><img data-src="img/myname.png" alt="Badge showing the name of the presenter (Philippe Massicotte)." width="600"></p>
 </div>
 <p><b>Research assistant at Takuvik (Laval University)</b><br></p>
 <p>Remote sensing, modelling, data science, data visualization, programming<br></p>
@@ -474,7 +476,7 @@ Philippe Massicotte
 </ol>
 </div>
 </div><div class="column" style="width:50%;">
-<p><img data-src="img/ai/old_school_lab.jpeg" width="800"></p>
+<p><img data-src="img/ai/old_school_lab.jpeg" alt="Old-school laboratory" width="800"></p>
 </div></div>
 </section>
 <section id="old-school-computing-in-laboratories-1" class="slide level2">
@@ -489,7 +491,7 @@ Philippe Massicotte
 <p><strong>To work with current Windows versions, the team would have to replace the whole microscope. The marginal potential gains aren’t yet worth the US$400,000 expense</strong>, Cherr reasons.</p>
 </blockquote>
 </div><div class="column" style="width:50%;">
-<p><img data-src="img/ai/old_school_microscope.jpeg" width="600"></p>
+<p><img data-src="img/ai/old_school_microscope.jpeg" alt="Old-school microscope" width="600"></p>
 </div></div>
 <p><i class="fa-solid fa-newspaper" aria-label="newspaper"></i> <a href="https://www.nature.com/articles/d41586-021-01431-y">Old-school computing: when your lab PC is ancient</a></p>
 </section>
@@ -523,10 +525,10 @@ Philippe Massicotte
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="smaller">A comma-separated values file (<code>.csv</code>).</span></p>
-<p><img data-src="./img/screenshots/penguins_csv_format.png"></p>
+<p><img data-src="./img/screenshots/penguins_csv_format.png" alt="Screenshot of a CSV file with the content of the Palmer penguins dataset"></p>
 </div><div class="column" style="width:50%;">
 <p><span class="smaller">A tabs separated values file (<code>.tsv</code>).</span></p>
-<p><img data-src="./img/screenshots/penguins_tsv_format.png"></p>
+<p><img data-src="./img/screenshots/penguins_tsv_format.png" alt="Screenshot of a TSV file with the content of the Palmer penguins dataset"></p>
 </div></div>
 
 <aside><div>
@@ -582,7 +584,7 @@ Philippe Massicotte
 <section id="the-geojson-format" class="slide level2">
 <h2>The GeoJSON format</h2>
 
-<img data-src="index_files/figure-revealjs/geojson-1.png" style="width:75.0%" class="r-stretch quarto-figure-center"><p class="caption">Data: <a href="https://bit.ly/2pAjOAr">https://bit.ly/2pAjOAr</a></p></section>
+<img data-src="index_files/figure-revealjs/geojson-1.png" style="width:75.0%" alt="The outline of the Colosseum amphitheatre in Rome created using a geojson file." class="r-stretch quarto-figure-center"><p class="caption">Data: <a href="https://bit.ly/2pAjOAr">https://bit.ly/2pAjOAr</a></p></section>
 <section id="the-geotiff-format" class="slide level2">
 <h2>The GeoTIFF format</h2>
 <blockquote>
@@ -590,14 +592,14 @@ Philippe Massicotte
 <p><a href="https://en.wikipedia.org/wiki/GeoTIFF">Wikipedia</a></p>
 </blockquote>
 <div class="center-align">
-<p><img data-src="img/ai/geotiff.jpeg" width="600"></p>
+<p><img data-src="img/ai/geotiff.jpeg" alt="AI generated image of a computer screen showing some scifi images." width="600"></p>
 </div>
 </section>
 <section id="the-geotiff-format-sst" class="slide level2">
 <h2>The GeoTIFF format (SST)</h2>
 <p>A GeoTIFF can contain information such as the Sea Surface Temperature (SST).</p>
 
-<img data-src="index_files/figure-revealjs/geotiff3-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%"></section>
+<img data-src="index_files/figure-revealjs/geotiff3-1.png" class="quarto-figure quarto-figure-center r-stretch" style="width:75.0%" alt="Sea Surface Temperature (SST) in the St-Lawrence River."></section>
 <section id="the-geotiff-format-sst-1" class="slide level2">
 <h2>The GeoTIFF format (SST)</h2>
 <p>A closer look allows us to better visualize the values (i.e.&nbsp;water temperature) within each pixel.</p>
@@ -611,23 +613,23 @@ Philippe Massicotte
 <p>Geographic data presented in a tabular form:</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="ohownxxdpz" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ohownxxdpz table {
+<div id="cvkeqlnsty" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#cvkeqlnsty table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ohownxxdpz thead, #ohownxxdpz tbody, #ohownxxdpz tfoot, #ohownxxdpz tr, #ohownxxdpz td, #ohownxxdpz th {
+#cvkeqlnsty thead, #cvkeqlnsty tbody, #cvkeqlnsty tfoot, #cvkeqlnsty tr, #cvkeqlnsty td, #cvkeqlnsty th {
   border-style: none;
 }
 
-#ohownxxdpz p {
+#cvkeqlnsty p {
   margin: 0;
   padding: 0;
 }
 
-#ohownxxdpz .gt_table {
+#cvkeqlnsty .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -653,12 +655,12 @@ Philippe Massicotte
   border-left-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_caption {
+#cvkeqlnsty .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ohownxxdpz .gt_title {
+#cvkeqlnsty .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -670,7 +672,7 @@ Philippe Massicotte
   border-bottom-width: 0;
 }
 
-#ohownxxdpz .gt_subtitle {
+#cvkeqlnsty .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -682,7 +684,7 @@ Philippe Massicotte
   border-top-width: 0;
 }
 
-#ohownxxdpz .gt_heading {
+#cvkeqlnsty .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -694,13 +696,13 @@ Philippe Massicotte
   border-right-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_bottom_border {
+#cvkeqlnsty .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_col_headings {
+#cvkeqlnsty .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -715,7 +717,7 @@ Philippe Massicotte
   border-right-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_col_heading {
+#cvkeqlnsty .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -735,7 +737,7 @@ Philippe Massicotte
   overflow-x: hidden;
 }
 
-#ohownxxdpz .gt_column_spanner_outer {
+#cvkeqlnsty .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -747,15 +749,15 @@ Philippe Massicotte
   padding-right: 4px;
 }
 
-#ohownxxdpz .gt_column_spanner_outer:first-child {
+#cvkeqlnsty .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ohownxxdpz .gt_column_spanner_outer:last-child {
+#cvkeqlnsty .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ohownxxdpz .gt_column_spanner {
+#cvkeqlnsty .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -767,11 +769,11 @@ Philippe Massicotte
   width: 100%;
 }
 
-#ohownxxdpz .gt_spanner_row {
+#cvkeqlnsty .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ohownxxdpz .gt_group_heading {
+#cvkeqlnsty .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -797,7 +799,7 @@ Philippe Massicotte
   text-align: left;
 }
 
-#ohownxxdpz .gt_empty_group_heading {
+#cvkeqlnsty .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -812,15 +814,15 @@ Philippe Massicotte
   vertical-align: middle;
 }
 
-#ohownxxdpz .gt_from_md > :first-child {
+#cvkeqlnsty .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ohownxxdpz .gt_from_md > :last-child {
+#cvkeqlnsty .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ohownxxdpz .gt_row {
+#cvkeqlnsty .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -839,7 +841,7 @@ Philippe Massicotte
   overflow-x: hidden;
 }
 
-#ohownxxdpz .gt_stub {
+#cvkeqlnsty .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -852,7 +854,7 @@ Philippe Massicotte
   padding-right: 5px;
 }
 
-#ohownxxdpz .gt_stub_row_group {
+#cvkeqlnsty .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -866,15 +868,15 @@ Philippe Massicotte
   vertical-align: top;
 }
 
-#ohownxxdpz .gt_row_group_first td {
+#cvkeqlnsty .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ohownxxdpz .gt_row_group_first th {
+#cvkeqlnsty .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ohownxxdpz .gt_summary_row {
+#cvkeqlnsty .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -884,16 +886,16 @@ Philippe Massicotte
   padding-right: 5px;
 }
 
-#ohownxxdpz .gt_first_summary_row {
+#cvkeqlnsty .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_first_summary_row.thick {
+#cvkeqlnsty .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ohownxxdpz .gt_last_summary_row {
+#cvkeqlnsty .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -903,7 +905,7 @@ Philippe Massicotte
   border-bottom-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_grand_summary_row {
+#cvkeqlnsty .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -913,7 +915,7 @@ Philippe Massicotte
   padding-right: 5px;
 }
 
-#ohownxxdpz .gt_first_grand_summary_row {
+#cvkeqlnsty .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -923,7 +925,7 @@ Philippe Massicotte
   border-top-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_last_grand_summary_row_top {
+#cvkeqlnsty .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -933,11 +935,11 @@ Philippe Massicotte
   border-bottom-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_striped {
+#cvkeqlnsty .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ohownxxdpz .gt_table_body {
+#cvkeqlnsty .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -946,7 +948,7 @@ Philippe Massicotte
   border-bottom-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_footnotes {
+#cvkeqlnsty .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -960,7 +962,7 @@ Philippe Massicotte
   border-right-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_footnote {
+#cvkeqlnsty .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -969,7 +971,7 @@ Philippe Massicotte
   padding-right: 5px;
 }
 
-#ohownxxdpz .gt_sourcenotes {
+#cvkeqlnsty .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -983,7 +985,7 @@ Philippe Massicotte
   border-right-color: #D3D3D3;
 }
 
-#ohownxxdpz .gt_sourcenote {
+#cvkeqlnsty .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -991,72 +993,72 @@ Philippe Massicotte
   padding-right: 5px;
 }
 
-#ohownxxdpz .gt_left {
+#cvkeqlnsty .gt_left {
   text-align: left;
 }
 
-#ohownxxdpz .gt_center {
+#cvkeqlnsty .gt_center {
   text-align: center;
 }
 
-#ohownxxdpz .gt_right {
+#cvkeqlnsty .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ohownxxdpz .gt_font_normal {
+#cvkeqlnsty .gt_font_normal {
   font-weight: normal;
 }
 
-#ohownxxdpz .gt_font_bold {
+#cvkeqlnsty .gt_font_bold {
   font-weight: bold;
 }
 
-#ohownxxdpz .gt_font_italic {
+#cvkeqlnsty .gt_font_italic {
   font-style: italic;
 }
 
-#ohownxxdpz .gt_super {
+#cvkeqlnsty .gt_super {
   font-size: 65%;
 }
 
-#ohownxxdpz .gt_footnote_marks {
+#cvkeqlnsty .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ohownxxdpz .gt_asterisk {
+#cvkeqlnsty .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ohownxxdpz .gt_indent_1 {
+#cvkeqlnsty .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ohownxxdpz .gt_indent_2 {
+#cvkeqlnsty .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ohownxxdpz .gt_indent_3 {
+#cvkeqlnsty .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ohownxxdpz .gt_indent_4 {
+#cvkeqlnsty .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ohownxxdpz .gt_indent_5 {
+#cvkeqlnsty .gt_indent_5 {
   text-indent: 25px;
 }
 
-#ohownxxdpz .katex-display {
+#cvkeqlnsty .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#ohownxxdpz div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#cvkeqlnsty div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1127,12 +1129,7 @@ Philippe Massicotte
 <section id="file-naming-who-can-relate" class="slide level2">
 <h2>File naming: who can relate?</h2>
 <div class="center-align">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/excalidraw/files_naming.png" style="width:70.0%"></p>
-<figcaption>Laptop showing a file explorer with files badly named.</figcaption>
-</figure>
-</div>
+<p><img data-src="img/excalidraw/files_naming.png" style="width:70.0%" alt="Laptop showing a file explorer with files badly named."></p>
 </div>
 </section>
 <section id="file-naming-basic-rules" class="slide level2">
@@ -1148,7 +1145,7 @@ Philippe Massicotte
 <h2>File naming basic rules</h2>
 <p>Why using special characters and spaces is a bad idea.</p>
 <div class="center-align">
-<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:80.0%"></p>
+<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:80.0%" alt="Screenshot showing an error message in R when trying to read a file with a special character."></p>
 </div>
 <div class="fragment">
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>r<span class="sc">$</span><span class="er">&gt;</span> <span class="fu">read_csv</span>(<span class="st">"myfile.csv"</span>)</span>
@@ -1163,7 +1160,7 @@ Philippe Massicotte
 <li>For example, use <code>0001</code>, <code>0002</code>, <code>1001</code> instead of <code>1</code>, <code>2</code>, <code>1001</code>.</li>
 </ul>
 <div class="center-align">
-<p><img data-src="img/excalidraw/files_sorting.png"></p>
+<p><img data-src="img/excalidraw/files_sorting.png" alt="Image showing how files are sorted in a file explorer."></p>
 </div>
 </section>
 <section id="when-file-naming-goes-wrong" class="slide level2">
@@ -1172,7 +1169,7 @@ Philippe Massicotte
 <div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/screenshots/python_file_naming.png"></p>
+<p><img data-src="img/screenshots/python_file_naming.png" alt="Screenshot of a scientific taking his heaad in his hands and sitting at a desk."></p>
 <figcaption>Source: <a href="https://bit.ly/2M8cViI">https://bit.ly/2M8cViI</a></figcaption>
 </figure>
 </div>
@@ -1191,7 +1188,7 @@ Philippe Massicotte
 <div class="center-align">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="img/excalidraw/files_sorting2.png" style="width:60.0%"></p>
+<p><img data-src="img/excalidraw/files_sorting2.png" style="width:60.0%" alt="Image showing how files are sorted in a file explorer on Windows and Linux."></p>
 <figcaption>Original image from: Bhandari Neupane, J. et al.&nbsp;Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).</figcaption>
 </figure>
 </div>
@@ -1255,8 +1252,10 @@ Philippe Massicotte
 <section id="preserve-information-keep-your-raw-data-raw-1" class="slide level2">
 <h2>Preserve information: keep your raw data raw</h2>
 <p>If a script changes the content of a raw data file and <span class="emphasize">saves it in the same file, likely, the script will not work the second time because the structure of the file has changed</span>.</p>
-
-<img data-src="img/excalidraw/keep_raw_data_raw_01.png" class="r-stretch quarto-figure-center"><p class="caption">Image showing that data can change after the data is cleaned.</p></section>
+<div class="center-align">
+<p><img data-src="img/excalidraw/keep_raw_data_raw_01.png" style="width:80.0%" alt="Image showing that data can change after the data is cleaned. The column name is separated into two columns firstname and lastname."></p>
+</div>
+</section>
 <section id="project-directory-structure" class="slide level2">
 <h2>Project directory structure</h2>
 <div>
@@ -1270,13 +1269,15 @@ Philippe Massicotte
 </section>
 <section id="project-directory-structure-1" class="slide level2">
 <h2>Project directory structure</h2>
-
-<img data-src="img/excalidraw/project_structure.png" class="r-stretch quarto-figure-center"><p class="caption">Image showing how I do organize my files in a data project.</p></section></section>
+<div class="center-align">
+<p><img data-src="img/excalidraw/project_structure.png" style="width:60.0%" alt="Schematic showing a project directory structure."></p>
+</div>
+</section></section>
 <section>
 <section id="tidy-data" class="title-slide slide level1 center" data-background-color="#2C404A">
 <h1>Tidy data</h1>
 <div class="center-align">
-<p><img data-src="img/ai/tidydata.jpeg" width="700"></p>
+<p><img data-src="img/ai/tidydata.jpeg" alt="AI generated image of a book and pencils on a desk." width="700"></p>
 </div>
 </section>
 <section id="why-do-we-want-tidy-data" class="slide level2">
@@ -1291,7 +1292,7 @@ Philippe Massicotte
 <div class="center-align">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_3.jpg" style="width:50.0%"></p>
+<p><img data-src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_3.jpg" style="width:60.0%" data-alt-text="On the left is a happy cute fuzzy monster holding a rectangular data frame with a tool that fits the data frame shape. On the workbench behind the monster are other data frames of similar rectangular shape, and neatly arranged tools that also look like they would fit those data frames. The workbench looks uncluttered and tidy. The text above the tidy workbench reads “When working with tidy data, we can use the same tools in similar ways for different datasets…” On the right is a cute monster looking very frustrated, using duct tape and other tools to haphazardly tie data tables together, each in a different way. The monster is in front of a messy, cluttered workbench. The text above the frustrated monster reads “...but working with untidy data often means reinventing the wheel with one-time approaches that are hard to iterate or reuse."></p>
 <figcaption>Artwork by <a href="https://twitter.com/allison_horst?s=20"><span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
 </figure>
 </div>
@@ -1304,7 +1305,7 @@ Philippe Massicotte
 <div class="center-align">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_1.jpg" style="width:70.0%"></p>
+<p><img data-src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_1.jpg" style="width:70.0%" alt="Stylized text providing an overview of Tidy Data. The top reads “Tidy data is a standard way of mapping the meaning of a dataset to its structure. - Hadley Wickham.” On the left reads “In tidy data: each variable forms a column; each observation forms a row; each cell is a single measurement.” There is an example table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for different cats, illustrating tidy data structure."></p>
 <figcaption>Artwork by <a href="https://twitter.com/allison_horst?s=20"><span class="citation" data-cites="allison_horst">@allison_horst</span></a></figcaption>
 </figure>
 </div>
@@ -1321,12 +1322,7 @@ Philippe Massicotte
 <li><span class="emphasize">Concrete use case: datasheets containing species abundance.</span></li>
 </ul>
 <div class="center-align">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/excalidraw/species_wide.png" style="width:70.0%"></p>
-<figcaption>Image showing a frequent method to enter count data in spreadsheet software.</figcaption>
-</figure>
-</div>
+<p><img data-src="img/excalidraw/species_wide.png" style="width:70.0%" alt="Image showing a frequent method to enter count data in spreadsheet software."></p>
 </div>
 </div>
 </section>
@@ -1334,19 +1330,14 @@ Philippe Massicotte
 <h2>How data should be structured</h2>
 <p>After proper transformations, the data is now tidy (<a href="https://en.wikipedia.org/wiki/Database_normalization">or in normal form</a>). <span class="emphasize">Each column is a variable, each row is an observation.</span></p>
 <div class="center-align">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/excalidraw/species_wide_to_long.png"></p>
-<figcaption>Image showing a frequent method to enter count data in spreadsheet software.</figcaption>
-</figure>
-</div>
+<p><img data-src="img/excalidraw/species_wide_to_long.png" style="width:90.0%" alt="Image showing a frequent method to enter count data in spreadsheet software."></p>
 </div>
 </section>
 <section id="keep-your-data-as-rectangle-tables" class="slide level2">
 <h2>Keep your data as rectangle tables</h2>
 <p>If you use a spreadsheet program, <span class="emphasize">keep your data arranged as rectangular tables</span>. Otherwise, <span class="emphasize">it makes data importation difficult</span>.</p>
 <div class="center-align">
-<p><img data-src="img/ai/spreadsheet.jpeg" width="800"></p>
+<p><img data-src="img/ai/spreadsheet.jpeg" alt="AI generated image of a piece of paper showing a spreadsheet." width="800"></p>
 </div>
 </section>
 <section id="keep-your-data-as-rectangle-tables-1" class="slide level2">
@@ -1355,32 +1346,22 @@ Philippe Massicotte
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>This sheet has one table.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/screenshots/data_rectangle1.png"></p>
-<figcaption>Data in a computer spreadsheet program.</figcaption>
-</figure>
-</div>
+<p><img data-src="img/screenshots/data_rectangle1.png" alt="Data in a computer spreadsheet program with one block of data."></p>
 </div><div class="column" style="width:50%;">
 <p>This sheet has two tables.</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="img/screenshots/data_rectangle2.png" style="height:50.0%"></p>
-<figcaption>Data in a computer spreadsheet program.</figcaption>
-</figure>
-</div>
+<p><img data-src="img/screenshots/data_rectangle2.png" style="height:50.0%" alt="Data in a computer spreadsheet program with two blocks of data."></p>
 </div></div>
 </section>
 <section id="keep-your-data-as-rectangle-tables-2" class="slide level2">
 <h2>Keep your data as rectangle tables</h2>
 <p>Do not be that person 😩😖😠😤💢😣🤦‍♀️🤦‍♂️😑😓</p>
-
-<img data-src="img/screenshots/data_rectangle3.png" class="r-stretch quarto-figure-center"><p class="caption">Data in a computer spreadsheet program.</p></section></section>
+<img data-src="img/screenshots/data_rectangle3.png" class="r-stretch" alt="Data in a computer spreadsheet program. Data is not arranged in a rectangle table and there is a geographic placed inside the sheet.">
+</section></section>
 <section>
 <section id="variable-names" class="title-slide slide level1 center" data-background-color="#2C404A">
 <h1>Variable names</h1>
 <div class="center-align">
-<p><img data-src="img/ai/variable_names.jpeg" width="800"></p>
+<p><img data-src="img/ai/variable_names.jpeg" alt="AI generated image of a cartoonish man in front of what looks like a computer with variable names on the screen." width="800"></p>
 </div>
 </section>
 <section id="variable-names-1" class="slide level2">
@@ -1455,7 +1436,7 @@ Philippe Massicotte
 <h2>Visualization</h2>
 <p>In this example, we see that there is an outlier in the data. Measuring device fault? Manual entry error?</p>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.svg" class="quarto-figure quarto-figure-center r-stretch" width="3000"></section></section>
+<img data-src="index_files/figure-revealjs/histogram-1.svg" class="quarto-figure quarto-figure-center r-stretch" alt="Histogram of air temperature. A histogram is an accurate representation of the distribution of numerical data. Here we can observe that there is an outlier in the data." width="3000"></section></section>
 <section>
 <section id="backups" class="title-slide slide level1 center" data-background-color="#2C404A">
 <h1>Backups</h1>
@@ -1464,7 +1445,7 @@ Philippe Massicotte
 <section id="it-is-not-if-but-when-your-hard-drive-will-fail." class="slide level2">
 <h2>It is not <em>if</em>, but <em>when</em> your hard drive will fail.</h2>
 <div class="center-align">
-<p><img data-src="img/ai/hd_fail.jpeg" width="800"></p>
+<p><img data-src="img/ai/hd_fail.jpeg" alt="AI generated image of a hard drive failing with a person crying because of loosing data." width="800"></p>
 </div>
 </section>
 <section id="backups-vs-archives" class="slide level2">
@@ -1594,14 +1575,14 @@ Philippe Massicotte
 <li><p>In an appendix along with your paper (<span class="emphasize">assuming that your paper is published in an open-access journal</span>).</p></li>
 </ol>
 <p><a href="https://www.doaj.org/">The Directory of Open Access Journals</a> is useful to search for open access journals.</p>
-<img data-src="img/doaj_logo.png" class="r-stretch">
+<img data-src="img/logo/doaj_logo.png" class="r-stretch" alt="Directory of Open Access Journals logo. The logo has three shapes on the left side and the text 'DOAJ' on the right side.">
 </section>
 <section id="public-announcement" class="slide level2">
 <h2>Public announcement <i class="fa-solid fa-bullhorn" aria-label="bullhorn"></i></h2>
 <div class="fragment">
 <p><span class="emphasize large">Summary tables in a PDF article are not very useful!</span></p>
 <div class="center-align">
-<p><img data-src="https://media.giphy.com/media/j9Y9vsklHWtjgHOtLk/giphy.gif" width="800"></p>
+<p><img data-src="https://media.giphy.com/media/j9Y9vsklHWtjgHOtLk/giphy.gif" alt="GIF showing a person throwing a book over his shoulder." width="800"></p>
 </div>
 </div>
 <div class="fragment">
@@ -1628,20 +1609,20 @@ Philippe Massicotte
 <h2>What is a data paper?</h2>
 <p>A data paper is similar to a traditional scientific paper.</p>
 <div class="center-align">
-<p><img data-src="img/screenshots/essd.png" style="width:50.0%"></p>
+<p><img data-src="img/screenshots/essd.png" style="width:50.0%" alt="Screenshot of the Earth System Science Data journal with an article featuring many authors."></p>
 </div>
 </section>
 <section id="what-is-a-data-paper-2" class="slide level2">
 <h2>What is a data paper?</h2>
 <p>The data associated with the paper is available online with an associated DOI.</p>
 <div class="center-align">
-<p><img data-src="img/screenshots/seanoe.png" style="width:50.0%"></p>
+<p><img data-src="img/screenshots/seanoe.png" style="width:50.0%" alt="Screenshot of the Seanoe website showing a dataset with a DOI."></p>
 </div>
 </section>
 <section id="section" class="slide level2">
 <h2></h2>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.svg" width="3600" class="r-stretch quarto-figure-center"><p class="caption">Number of downloads per country for each dataset.</p></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.svg" alt="Bar plot showing the number of downloads per country for each dataset." width="3600" class="r-stretch quarto-figure-center"><p class="caption">Number of downloads per country for each dataset.</p></section>
 <section id="open-data-repositories" class="slide level2">
 <h2>Open data repositories</h2>
 <ul>
