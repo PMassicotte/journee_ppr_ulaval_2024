@@ -240,7 +240,7 @@ Data source: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipe
 
 ## Common open-source geographic file formats
 
-::: {.small}
+::: {.medium}
 
 These files contain information on geographic features such as [points, lines or polygons]{.emphasize}. There are a ton of [geographical file formats](https://gisgeography.com/gis-formats/), but here are some that are particularly popular.
 
