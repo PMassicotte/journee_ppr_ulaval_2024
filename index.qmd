@@ -12,7 +12,7 @@ format:
   revealjs:
     fig-dpi: 300
     theme: style/slides.scss
-    footer: "[{{< fa house >}} TODO](https://j-jayes.github.io/Data-Visualization-in-R-Lund/)"
+    footer: "[{{< fa house >}} https://pmassicotte.github.io/journee_ppr_ulaval_2024](https://pmassicotte.github.io/journee_ppr_ulaval_2024)"
     height: 1080
     width: 1920
     slide-number: c/t
