@@ -179,7 +179,11 @@ When you depend on profit companies.
 
 ::::
 
+::: aside
+
 {{< fa newspaper >}} [Old-school computing: when your lab PC is ancient](https://www.nature.com/articles/d41586-021-01431-y)
+
+:::
 
 ## File formats
 
@@ -632,7 +636,13 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 Data files were sorted differently depending on the operating system where the Python scripts were executed.
 
 ::: {.center-align}
-![Original image from: Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).](img/excalidraw/files_sorting2.png){width=60% fig-alt="Image showing how files are sorted in a file explorer on Windows and Linux."}
+![](img/excalidraw/files_sorting2.png){width=50% fig-alt="Image showing how files are sorted in a file explorer on Windows and Linux."}
+
+:::
+
+::: aside
+
+Original image from: Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).
 
 :::
 
@@ -784,7 +794,7 @@ The main idea is that data should be organized in columns with [each column repr
 
 . . .
 
-- [Concrete use case: datasheets containing species abundance.]{.emphasize}
+[Example: a datasheet with species abundance data.]{.emphasize}
 
 ::: {.center-align}
 
@@ -822,7 +832,7 @@ These two examples show the same data. One is arranged as two tables whereas the
 
 This sheet has one table.
 
-![](img/screenshots/data_rectangle1.png){fig-alt="Data in a computer spreadsheet program with one block of data."}
+![](img/screenshots/data_rectangle1.png){width=600 fig-alt="Data in a computer spreadsheet program with one block of data."}
 
 :::
 
