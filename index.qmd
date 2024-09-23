@@ -218,7 +218,7 @@ All these file formats can be opened using a simple text editor.
 <!-- Screenshots made using maim -->
 <!-- maim ~/Desktop/penguins_tsv_format.png -g 1300x725+4070+210 -->
 
-This dataset contains 4 variables (columns). [The first line generally contains the names of the variables.]{.emphasize}
+This dataset contains 4 variables (columns). [The first line generally includes the names of the variables.]{.emphasize}
 
 :::: {.columns}
 
@@ -363,7 +363,7 @@ sf |>
 
 ::: {.center-align}
 
-![](img/ai/geotiff.jpeg){width=600 fig-alt="AI generated image of a computer screen showing some scifi images."}
+![](img/ai/geotiff.jpeg){width=600 fig-alt="AI generated image of a computer screen showing some sci-fi images."}
 
 :::
 
@@ -581,7 +581,7 @@ There are a few rules to adopt when naming files:
 - Do not use special characters: **~ ! @ # $ % ^ & \* ( ) ; < > ? , [ ] { } é è à**
 - No spaces.
 
-This will ensure that the files will be recognized on most operating systems and software.
+This will ensure that the files are recognized by most operating systems and software.
 
 ## File naming basic rules
 
@@ -617,7 +617,7 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 
 ::: {.column width=50%}
 
-![Source: <a href="https://bit.ly/2M8cViI">https://bit.ly/2M8cViI</a>](img/screenshots/python_file_naming.png){fig-alt="Screenshot of a scientific taking his heaad in his hands and sitting at a desk."}
+![Source: <a href="https://bit.ly/2M8cViI">https://bit.ly/2M8cViI</a>](img/screenshots/python_file_naming.png){fig-alt="Screenshot of a scientific taking his head in his hands and sitting at a desk."}
 
 :::
 
@@ -642,7 +642,7 @@ Data files were sorted differently depending on the operating system where the P
 
 ::: aside
 
-Original image from: Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).
+Original image from Bhandari Neupane, J. et al. Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).
 
 :::
 
@@ -710,7 +710,7 @@ Basic recommendations to preserve the raw data for future use:
 
 - [Use a scripted language (R, Python, Matlab, etc.) to perform analysis or make corrections and save that information in a separate file.]{.emphasize}
 
-- If you absolutely want to do some analyses in Excel ^[{{< fa heart >}} In fact, do not use Excel {{< fa heart >}}], make a copy of the file and do your calculations and graphs in the copy.
+- If you want to do some analyses in Excel ^[{{< fa heart >}} In fact, do not use Excel {{< fa heart >}}], make a copy of the file and do your calculations and graphs in the copy.
 
 :::
 
@@ -804,7 +804,7 @@ The main idea is that data should be organized in columns with [each column repr
 
 ## How data should be structured
 
-After proper transformations, the data is now tidy ([or in normal form](https://en.wikipedia.org/wiki/Database_normalization)). [Each column is a variable, each row is an observation.]{.emphasize}
+After proper transformations, the data is now tidy ([or in normal form](https://en.wikipedia.org/wiki/Database_normalization)). [Each column is a variable, and each row is an observation.]{.emphasize}
 
 ::: {.center-align}
 
@@ -850,7 +850,7 @@ This sheet has two tables.
 
 Do not be that person 😩😖😠😤💢😣🤦‍♀️🤦‍♂️😑😓
 
-![](img/screenshots/data_rectangle3.png){.r-stretch fig-alt="Data in a computer spreadsheet program. Data is not arranged in a rectangle table and there is a geographic placed inside the sheet."}
+![](img/screenshots/data_rectangle3.png){.r-stretch fig-alt="Data in a computer spreadsheet program. Data is not arranged in a rectangle table and there is a graphic placed inside the sheet."}
 
 # Variable names {background-color="#2C404A"}
 
@@ -991,7 +991,7 @@ df |>
 
 ::: {.center-align}
 
-![](img/ai/hd_fail.jpeg){width=800 fig-alt="AI generated image of a hard drive failing with a person crying because of loosing data."}
+![](img/ai/hd_fail.jpeg){width=800 fig-alt="AI generated image of a hard drive failing with a person crying because of losing data."}
 
 :::
 
@@ -999,7 +999,7 @@ df |>
 
 ::: {.callout-note title="Backups"}
 
-Backup is a copy of data created to restore said data in case of damage or loss. **The original data is not deleted after a backup is made**.
+A backup is a copy of data created to restore said data in case of damage or loss. **The original data is not deleted after a backup is made**.
 
 :::
 
@@ -1039,7 +1039,7 @@ An archive is a copy of data created for reference purposes. **Although not requ
 
 ::: {.callout-important title="Important"}
 
-Check with your insitution or funding agency to see if they have a policy on data storage and backup. You may be required to use a specific service for sensitive data.
+Check with your institution or funding agency to see if they have a policy on data storage and backup. You may be required to use a specific service for sensitive data.
 
 :::
 
@@ -1070,7 +1070,7 @@ I keep three months of data at three different locations:
 - Git is a version control system used to keep track of changes in computer files.
 
   - Primarily used for source code management in software development.
-  - Coordinating work on those files among multiple peoples.
+  - Coordinating work on those files among multiple people.
 
 ::: {.center-align}
 
@@ -1109,7 +1109,7 @@ There are at least two different ways to make your data available:
 
 2. In an appendix along with your paper ([assuming that your paper is published in an open-access journal]{.emphasize}).
 
-[The Directory of Open Access Journals](https://www.doaj.org/) is useful to search for open access journals.
+[The Directory of Open Access Journals](https://www.doaj.org/) is useful for searching for open access journals.
 
 ![](img/logo/doaj_logo.png){.r-stretch fig-alt="Directory of Open Access Journals logo. The logo has three shapes on the left side and the text 'DOAJ' on the right side."}
 
