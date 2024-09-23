@@ -710,7 +710,7 @@ Basic recommendations to preserve the raw data for future use:
 
 - [Use a scripted language (R, Python, Matlab, etc.) to perform analysis or make corrections and save that information in a separate file.]{.emphasize}
 
-- If you want to do some analyses in Excel, make a copy of the file and do your calculations and graphs in the copy.
+- If you absolutely want to do some analyses in Excel ^[{{< fa heart >}} In fact, do not use Excel {{< fa heart >}}], make a copy of the file and do your calculations and graphs in the copy.
 
 :::
 
