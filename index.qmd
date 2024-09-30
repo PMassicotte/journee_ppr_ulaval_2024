@@ -503,9 +503,7 @@ ggplot() +
     y = NULL
   ) +
   coord_sf() +
-  theme(
-    legend.position = "none"
-  )
+  guides(fill = "none")
 ```
 
 ## A note on geospatial data
@@ -662,7 +660,7 @@ Original image from Bhandari Neupane, J. et al. Characterization of Leptazolines
 
   - Date (YYYY-MM-DD).
 
-- [Always use the ISO format:]{.emphasize} [ YYYY ]{.larger}[ MM ]{.medium}[ DD ]{.small} (large [{{< fa arrow-right >}}]{style="color: #d5695d"} small).
+- [Always use the ISO format:]{.emphasize} [ YYYY ]{.larger}-[ MM ]{.medium}-[ DD ]{.small} (large [{{< fa arrow-right >}}]{style="color: #d5695d"} small).
 
 - [{{< fa times >}}]{style="color: #E6352FFF;"} 12-04-09 (2012-04-09 or 2004-12-09 or 2009-04-12, or ..., 6 possibiles combination in total)
 
@@ -710,7 +708,7 @@ Basic recommendations to preserve the raw data for future use:
 
 - [Use a scripted language (R, Python, Matlab, etc.) to perform analysis or make corrections and save that information in a separate file.]{.emphasize}
 
-- If you want to do some analyses in Excel ^[{{< fa heart >}} In fact, do not use Excel {{< fa heart >}}], make a copy of the file and do your calculations and graphs in the copy.
+- If you want to do some analyses in Excel ^[In fact, do not use Excel {{< fa thumbs-down >}}], make a copy of the file and do your calculations and graphs in the copy.
 
 :::
 
@@ -721,6 +719,8 @@ Basic recommendations to preserve the raw data for future use:
 ## Preserve information: keep your raw data raw
 
 If a script changes the content of a raw data file and [saves it in the same file, likely, the script will not work the second time because the structure of the file has changed]{.emphasize}.
+
+. . .
 
 ::: {.center-align}
 
