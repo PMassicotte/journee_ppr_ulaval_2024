@@ -458,8 +458,7 @@ ggplot() +
     fill = "Water temperature (°C)",
     x = NULL,
     y = NULL,
-    title = "SST in the St-Lawrence River (2020-01-20)",
-    caption = "Satellite Imagery Data from Landsat"
+    title = "SST in the St-Lawrence River (2020-01-20)"
   ) +
   theme(
     legend.justification = c(0, 0),
@@ -635,7 +634,7 @@ For sequential numbering, [use leading zeros to ensure files sort properly.]{.em
 
 ## When file naming goes wrong!
 
-Data files were sorted differently depending on the operating system where the Python scripts were executed.
+[Data files were sorted differently depending on the operating system where the Python scripts were executed.]{.emphasize}
 
 ::: {.center-align}
 ![](img/excalidraw/files_sorting2.png){width=50% fig-alt="Image showing how files are sorted in a file explorer on Windows and Linux."}
@@ -664,7 +663,7 @@ Original image from Bhandari Neupane, J. et al. Characterization of Leptazolines
 
   - Date (YYYY-MM-DD).
 
-- [Always use the ISO format:]{.emphasize} [ YYYY ]{.larger}-[ MM ]{.medium}-[ DD ]{.small} (large [{{< fa arrow-right >}}]{style="color: #d5695d"} small).
+- [Always use the ISO 8601 format:]{.emphasize} [ YYYY ]{.larger}-[ MM ]{.medium}-[ DD ]{.small} (large [{{< fa arrow-right >}}]{style="color: #d5695d"} small).
 
 - [{{< fa times >}}]{style="color: #E6352FFF;"} 12-04-09 (2012-04-09 or 2004-12-09 or 2009-04-12, or ..., There are a total of 6 possible combinations.)
 
@@ -894,7 +893,7 @@ Do not be that person 😩😖😠😤😣🤦‍♀️🤦‍♂️😑😓
 
 - Explicitly state the unit of each variable:
 
-  - `depth_m`, `chla_mg_m2`
+  - `depth_m`, `area_km2`, `distance_km`, `wind_speed_m_s`
 
 - Be consistent with variable names across files:
   - `temp` vs `temperature`
@@ -964,7 +963,7 @@ df_arrow <- tibble(
 
 df |>
   ggplot(aes(x = temperature)) +
-  geom_histogram(binwidth = 5) +
+  geom_histogram(binwidth = 5, color = "white") +
   labs(
     title = "Histogram of air temperature",
     subtitle = str_wrap("A histogram is an accurate representation of the distribution of numerical data. Here we can observe that there is an outlier in the data.", 90)
@@ -1049,6 +1048,18 @@ Check with your institution or funding agency to see if they have a policy on da
 
 ## Importance of backups
 
+::: {.callout-note title="The 3-2-1 backup rule"}
+
+- **3 total copies** of your data (the original and two backups).
+
+- **2 different media types** for the backups (e.g., an external hard drive and cloud storage).
+
+- **1 copy stored offsite**, to protect against local disasters like fire or theft.
+
+:::
+
+## Importance of backups
+
 Use an incremental strategy to backup your data ([ideally daily]{.emphasize}):
 
 - [rsync](https://fr.wikipedia.org/wiki/Rsync)
@@ -1065,7 +1076,7 @@ I keep three months of data at three different locations:
 
 2. On an external hard drive.
 
-3. On a cloud service provided by my University.
+3. On a cloud service provided by my university.
 
 ## Source code management
 
@@ -1090,18 +1101,18 @@ Many journals and [funding agencies](http://www.science.gc.ca/eic/site/063.nsf/f
 
 ::: {.incremental}
 
-- Makes your data shareable (do not forget that research is funded with public money).
+- Share your data (publicly funded research should be accessible).
 
-- Makes your data discoverable.
+- Make your data discoverable.
 
-- Makes your data citable ([DOI, Digital Object Identifier]{.emphasize}).
+- Make your data citable (using [DOI, Digital Object Identifier]{.emphasize}).
 
-  - Collecting and producing data is difficult and requires a lot of resources (technical and financial).
-  - Publishing your data allows other people to credit you for your hard work.
+  - Data collection is resource-intensive.
+  - Publishing allows others to credit your work.
 
-- Others can find and correct errors in your data.
+- Others can find and fix errors in your data.
 
-- Data can be reused in other studies to build up knowledge.
+- Data can be reused in other studies.
 
 :::
 
@@ -1138,7 +1149,7 @@ You should rather provide the data in a way that is easily importable into a pro
 - [Data presented in an appendix are rarely reviewed by peers.]{.emphasize}
 - Data papers are interesting alternatives to publish data:
 
-  - [Peer-reviewed]{.emphasize} (high-quality data).
+  - [Peer-reviewed]{.emphasize} (high-quality data, in theory!).
   - Generally open access (obliviously!).
   - Data are citable with a DOI.
 
