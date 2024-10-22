@@ -1202,7 +1202,7 @@
 </section>
 <section id="when-file-naming-goes-wrong-1" class="slide level2">
 <h2>When file naming goes wrong!</h2>
-<p>Data files were sorted differently depending on the operating system where the Python scripts were executed.</p>
+<p><span class="emphasize">Data files were sorted differently depending on the operating system where the Python scripts were executed.</span></p>
 <div class="center-align">
 <p><img data-src="img/excalidraw/files_sorting2.png" style="width:50.0%" alt="Image showing how files are sorted in a file explorer on Windows and Linux."></p>
 </div>
@@ -1222,7 +1222,7 @@
 <li class="fragment"><p>Type of data/variable.</p></li>
 <li class="fragment"><p>Date (YYYY-MM-DD).</p></li>
 </ul></li>
-<li class="fragment"><p><span class="emphasize">Always use the ISO format:</span> <span class="larger">YYYY</span>-<span class="medium">MM</span>-<span class="small">DD</span> (large <span style="color: #d5695d"><i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></span> small).</p></li>
+<li class="fragment"><p><span class="emphasize">Always use the ISO 8601 format:</span> <span class="larger">YYYY</span>-<span class="medium">MM</span>-<span class="small">DD</span> (large <span style="color: #d5695d"><i class="fa-solid fa-arrow-right" aria-label="arrow-right"></i></span> small).</p></li>
 <li class="fragment"><p><span style="color: #E6352FFF;"><i class="fa-solid fa-times" aria-label="times"></i></span> 12-04-09 (2012-04-09 or 2004-12-09 or 2009-04-12, or …, There are a total of 6 possible combinations.)</p></li>
 <li class="fragment"><p><span style="color: #34A74BFF;"><i class="fa-solid fa-check" aria-label="check"></i></span> 2012-04-09 (2012 April 9th)</p></li>
 </ul>
@@ -1404,7 +1404,7 @@
 <li class="fragment"><p>Do not use special characters or spaces (same as for file names).</p></li>
 <li class="fragment"><p>Explicitly state the unit of each variable:</p>
 <ul>
-<li class="fragment"><code>depth_m</code>, <code>chla_mg_m2</code></li>
+<li class="fragment"><code>depth_m</code>, <code>area_km2</code>, <code>distance_km</code>, <code>wind_speed_m_s</code></li>
 </ul></li>
 <li class="fragment"><p>Be consistent with variable names across files:</p>
 <ul>
@@ -1533,6 +1533,28 @@
 </section>
 <section id="importance-of-backups-1" class="slide level2">
 <h2>Importance of backups</h2>
+<div title="The 3-2-1 backup rule">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>The 3-2-1 backup rule</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li><p><strong>3 total copies</strong> of your data (the original and two backups).</p></li>
+<li><p><strong>2 different media types</strong> for the backups (e.g., an external hard drive and cloud storage).</p></li>
+<li><p><strong>1 copy stored offsite</strong>, to protect against local disasters like fire or theft.</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="importance-of-backups-2" class="slide level2">
+<h2>Importance of backups</h2>
 <p>Use an incremental strategy to backup your data (<span class="emphasize">ideally daily</span>):</p>
 <ul>
 <li><p><a href="https://fr.wikipedia.org/wiki/Rsync">rsync</a></p></li>
@@ -1544,7 +1566,7 @@
 <ol type="1">
 <li><p>On my computer.</p></li>
 <li><p>On an external hard drive.</p></li>
-<li><p>On a cloud service provided by my University.</p></li>
+<li><p>On a cloud service provided by my university.</p></li>
 </ol>
 </section>
 <section id="source-code-management" class="slide level2">
@@ -1571,15 +1593,15 @@
 <p>Many journals and <a href="http://www.science.gc.ca/eic/site/063.nsf/fra/h_97610.html">funding agencies</a> now require to have archiving strategies. Why?</p>
 <div>
 <ul>
-<li class="fragment"><p>Makes your data shareable (do not forget that research is funded with public money).</p></li>
-<li class="fragment"><p>Makes your data discoverable.</p></li>
-<li class="fragment"><p>Makes your data citable (<span class="emphasize">DOI, Digital Object Identifier</span>).</p>
+<li class="fragment"><p>Share your data (publicly funded research should be accessible).</p></li>
+<li class="fragment"><p>Make your data discoverable.</p></li>
+<li class="fragment"><p>Make your data citable (using <span class="emphasize">DOI, Digital Object Identifier</span>).</p>
 <ul>
-<li class="fragment">Collecting and producing data is difficult and requires a lot of resources (technical and financial).</li>
-<li class="fragment">Publishing your data allows other people to credit you for your hard work.</li>
+<li class="fragment">Data collection is resource-intensive.</li>
+<li class="fragment">Publishing allows others to credit your work.</li>
 </ul></li>
-<li class="fragment"><p>Others can find and correct errors in your data.</p></li>
-<li class="fragment"><p>Data can be reused in other studies to build up knowledge.</p></li>
+<li class="fragment"><p>Others can find and fix errors in your data.</p></li>
+<li class="fragment"><p>Data can be reused in other studies.</p></li>
 </ul>
 </div>
 </section>
@@ -1611,7 +1633,7 @@
 <li><p><span class="emphasize">Data presented in an appendix are rarely reviewed by peers.</span></p></li>
 <li><p>Data papers are interesting alternatives to publish data:</p>
 <ul>
-<li><span class="emphasize">Peer-reviewed</span> (high-quality data).</li>
+<li><span class="emphasize">Peer-reviewed</span> (high-quality data, in theory!).</li>
 <li>Generally open access (obliviously!).</li>
 <li>Data are citable with a DOI.</li>
 </ul></li>
