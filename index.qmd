@@ -197,7 +197,7 @@ Ideally, the chosen file format should have these characteristics:
 
 2. **Unencrypted**: [unless it contains personal or sensitive data.]{.emphasize}
 
-3. **human-readable**: the file should be human-readable [or have open source tools]{.emphasize} available for reading and writing.
+3. **Human-readable**: the file should be human-readable [or have open source tools]{.emphasize} available for reading and writing.
 
 4. **Performance**: consideration for efficient read and write operations, especially for large datasets, is crucial for optimal performance.
 
