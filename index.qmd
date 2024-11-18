@@ -359,6 +359,8 @@ sf |>
 
 ## The GeoTIFF format
 
+Often associated with satellite imagery.
+
 > GeoTIFF is a public domain metadata standard that allows [georeferencing information to be embedded within a TIFF file.]{.emphasize} The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file.
 >
 > [Wikipedia](https://en.wikipedia.org/wiki/GeoTIFF)
@@ -586,24 +588,6 @@ This will ensure that the files are recognized by most operating systems and sof
 
 ## File naming basic rules
 
-Why using special characters and spaces is a bad idea.
-
-::: {.center-align}
-
-![](img/screenshots/invalid_multibyte_string.png){width=80% fig-alt="Screenshot showing an error message in R when trying to read a file with a special character."}
-
-:::
-
-. . .
-
-```{.r}
-r$> read_csv("myfile.csv")
-Rows: 104937 Columns: 1
-Error in nchar(x, "width") : invalid multibyte string, element 1
-```
-
-## File naming basic rules
-
 For sequential numbering, [use leading zeros to ensure files sort properly.]{.emphasize}
 
 - For example, use `0001`, `0002`, `1001` instead of `1`, `2`, `1001`.
@@ -707,7 +691,7 @@ Basic recommendations to preserve the raw data for future use:
 
 ::: {.incremental}
 
-- Do not make any changes or corrections to the original raw data file.
+- Do not make any changes or corrections to the original raw data files.
 
 - [Use a scripted language (R, Python, Matlab, etc.) to perform analysis or make corrections and save that information in a separate file.]{.emphasize}
 
@@ -889,16 +873,35 @@ Do not be that person 😩😖😠😤😣🤦‍♀️🤦‍♂️😑😓
 
   - `tmin` vs `temperature_minimum`
 
-- Do not use special characters or spaces (same as for file names).
-
 - Explicitly state the unit of each variable:
 
   - `depth_m`, `area_km2`, `distance_km`, `wind_speed_m_s`
 
 - Be consistent with variable names across files:
+
   - `temp` vs `temperature`
 
+- Do not use special characters or spaces (same as for file names).
+
 :::
+
+## Variable names
+
+Why using special characters and spaces is a bad idea.
+
+::: {.center-align}
+
+![](img/screenshots/invalid_multibyte_string.png){width=80% fig-alt="Screenshot showing an error message in R when trying to read a file with a special character."}
+
+:::
+
+. . .
+
+```{.r}
+r$> read_csv("myfile.csv")
+Rows: 104937 Columns: 1
+Error in nchar(x, "width") : invalid multibyte string, element 1
+```
 
 ## Missing values
 
@@ -1019,7 +1022,7 @@ An archive is a copy of data created for reference purposes. **Although not requ
 
 ## Importance of backups
 
-::: {.incremental .r-fit-text}
+::: {.incremental .medium}
 
 - [Disk space is much cheaper than the time you invested in collecting, cleaning and analyzing your
   data.]{.emphasize}
@@ -1077,6 +1080,10 @@ I keep three months of data at three different locations:
 2. On an external hard drive.
 
 3. On a cloud service provided by my university.
+
+## Restoring from an incremental backup
+
+![](img/duplicati.png){.r-stretch fig-align="center" fig-alt="List of Duplicati backup jobs."}
 
 ## Source code management
 

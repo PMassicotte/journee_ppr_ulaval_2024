@@ -605,6 +605,7 @@
 <img data-src="index_files/figure-revealjs/geojson-1.png" style="width:75.0%" alt="The outline of the Colosseum amphitheatre in Rome created using a geojson file." class="r-stretch quarto-figure-center"><p class="caption">Data: <a href="https://bit.ly/2pAjOAr">https://bit.ly/2pAjOAr</a></p></section>
 <section id="the-geotiff-format" class="slide level2">
 <h2>The GeoTIFF format</h2>
+<p>Often associated with satellite imagery.</p>
 <blockquote>
 <p>GeoTIFF is a public domain metadata standard that allows <span class="emphasize">georeferencing information to be embedded within a TIFF file.</span> The potential additional information includes map projection, coordinate systems, ellipsoids, datums, and everything else necessary to establish the exact spatial reference for the file.</p>
 <p><a href="https://en.wikipedia.org/wiki/GeoTIFF">Wikipedia</a></p>
@@ -1161,18 +1162,6 @@
 </section>
 <section id="file-naming-basic-rules-1" class="slide level2">
 <h2>File naming basic rules</h2>
-<p>Why using special characters and spaces is a bad idea.</p>
-<div class="center-align">
-<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:80.0%" alt="Screenshot showing an error message in R when trying to read a file with a special character."></p>
-</div>
-<div class="fragment">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>r<span class="sc">$</span><span class="er">&gt;</span> <span class="fu">read_csv</span>(<span class="st">"myfile.csv"</span>)</span>
-<span id="cb2-2"><a href=""></a>Rows<span class="sc">:</span> <span class="dv">104937</span> Columns<span class="sc">:</span> <span class="dv">1</span></span>
-<span id="cb2-3"><a href=""></a>Error <span class="cf">in</span> <span class="fu">nchar</span>(x, <span class="st">"width"</span>) <span class="sc">:</span> invalid multibyte string, element <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="file-naming-basic-rules-2" class="slide level2">
-<h2>File naming basic rules</h2>
 <p>For sequential numbering, <span class="emphasize">use leading zeros to ensure files sort properly.</span></p>
 <ul>
 <li>For example, use <code>0001</code>, <code>0002</code>, <code>1001</code> instead of <code>1</code>, <code>2</code>, <code>1001</code>.</li>
@@ -1210,7 +1199,7 @@
 <aside><div>
 <p>Original image from Bhandari Neupane, J. et al.&nbsp;Characterization of Leptazolines A-D, Polar Oxazolines from the Cyanobacterium Leptolyngbya sp., Reveals a Glitch with the “Willoughby-Hoye” Scripts for Calculating NMR Chemical Shifts. Org. Lett. 21, 8449-8453 (2019).</p>
 </div></aside></section>
-<section id="file-naming-basic-rules-3" class="slide level2">
+<section id="file-naming-basic-rules-2" class="slide level2">
 <h2>File naming basic rules</h2>
 <div>
 <ul>
@@ -1256,7 +1245,7 @@
 <p>Basic recommendations to preserve the raw data for future use:</p>
 <div>
 <ul>
-<li class="fragment"><p>Do not make any changes or corrections to the original raw data file.</p></li>
+<li class="fragment"><p>Do not make any changes or corrections to the original raw data files.</p></li>
 <li class="fragment"><p><span class="emphasize">Use a scripted language (R, Python, Matlab, etc.) to perform analysis or make corrections and save that information in a separate file.</span></p></li>
 <li class="fragment"><p>If you want to do some analyses in Excel <sup>1</sup>, make a copy of the file and do your calculations and graphs in the copy.</p></li>
 </ul>
@@ -1401,7 +1390,6 @@
 <ul>
 <li class="fragment"><code>tmin</code> vs <code>temperature_minimum</code></li>
 </ul></li>
-<li class="fragment"><p>Do not use special characters or spaces (same as for file names).</p></li>
 <li class="fragment"><p>Explicitly state the unit of each variable:</p>
 <ul>
 <li class="fragment"><code>depth_m</code>, <code>area_km2</code>, <code>distance_km</code>, <code>wind_speed_m_s</code></li>
@@ -1410,7 +1398,20 @@
 <ul>
 <li class="fragment"><code>temp</code> vs <code>temperature</code></li>
 </ul></li>
+<li class="fragment"><p>Do not use special characters or spaces (same as for file names).</p></li>
 </ul>
+</div>
+</section>
+<section id="variable-names-3" class="slide level2">
+<h2>Variable names</h2>
+<p>Why using special characters and spaces is a bad idea.</p>
+<div class="center-align">
+<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:80.0%" alt="Screenshot showing an error message in R when trying to read a file with a special character."></p>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>r<span class="sc">$</span><span class="er">&gt;</span> <span class="fu">read_csv</span>(<span class="st">"myfile.csv"</span>)</span>
+<span id="cb2-2"><a href=""></a>Rows<span class="sc">:</span> <span class="dv">104937</span> Columns<span class="sc">:</span> <span class="dv">1</span></span>
+<span id="cb2-3"><a href=""></a>Error <span class="cf">in</span> <span class="fu">nchar</span>(x, <span class="st">"width"</span>) <span class="sc">:</span> invalid multibyte string, element <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="missing-values" class="slide level2">
@@ -1502,7 +1503,7 @@
 </div></aside></section>
 <section id="importance-of-backups" class="slide level2">
 <h2>Importance of backups</h2>
-<div class="r-fit-text">
+<div class="medium">
 <ul>
 <li class="fragment"><p><span class="emphasize">Disk space is much cheaper than the time you invested in collecting, cleaning and analyzing your data.</span></p></li>
 <li class="fragment"><p>It is important to have <span class="emphasize">redundancy</span> in your data.</p></li>
@@ -1569,6 +1570,10 @@
 <li><p>On a cloud service provided by my university.</p></li>
 </ol>
 </section>
+<section id="restoring-from-an-incremental-backup" class="slide level2">
+<h2>Restoring from an incremental backup</h2>
+
+<img data-src="img/duplicati.png" class="r-stretch quarto-figure quarto-figure-center" alt="List of Duplicati backup jobs."></section>
 <section id="source-code-management" class="slide level2">
 <h2>Source code management</h2>
 <ul>
