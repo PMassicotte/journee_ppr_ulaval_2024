@@ -373,7 +373,7 @@ A GeoTIFF can contain information such as the Sea Surface Temperature (SST).
 
 ```{r}
 #| label: geotiff3
-#| cache: true
+#| cache: false
 #| fig-format: png
 #| crop: true
 #| fig-dpi: 300
@@ -474,7 +474,7 @@ A closer look allows us to better visualize the values (i.e., water temperature)
 
 ```{r}
 #| label: geotiff4
-#| cache: true
+#| cache: false
 #| fig-height: 3
 #| fig-format: png
 #| crop: true
