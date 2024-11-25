@@ -1137,7 +1137,6 @@ The traditional way to publish data is to include it as supplementary informatio
 - In an appendix along with your paper ([assuming that your paper is published in an open-access journal]{.emphasize}).
 - [Data presented in an appendix are rarely reviewed by peers.]{.emphasize}
 
-
 [The Directory of Open Access Journals](https://www.doaj.org/) is useful for searching for open access journals.
 
 ![](img/logo/doaj_logo.png){.r-stretch fig-alt="Directory of Open Access Journals logo. The logo has three shapes on the left side and the text 'DOAJ' on the right side."}
@@ -1198,7 +1197,6 @@ The data associated with the paper is available online with an associated DOI.
 #| echo: false
 #| fig-width: 12
 #| fig-height: 7
-#| fig.cap: "Number of downloads per country for each dataset."
 #| fig-alt: "Bar plot showing the number of downloads per country for each dataset."
 url <- pins::board_url(
   list(seanoe = "https://www.seanoe.org/html/stat/2022/uj4mfvvquq-philippemassicottetakuvikulavalca.xls")
@@ -1213,7 +1211,7 @@ df_viz <- df |>
   mutate(country = fct_na_value_to_level(country, level = "Unknown")) |>
   mutate(country = fct_lump(country, n = 9)) |>
   count(dataset_title, country) |>
-  mutate(dataset_title = str_wrap(dataset_title, 60)) |>
+  mutate(dataset_title = str_wrap(dataset_title, 55)) |>
   mutate(country2 = country) |>
   mutate(country = reorder_within(country, n, dataset_title))
 
@@ -1223,8 +1221,9 @@ df_viz |>
   scale_y_reordered() +
   ggthemes::scale_fill_tableau() +
   labs(
-    x = "Total number of downloads",
-    y = NULL
+    x = "Number of downloads",
+    y = NULL,
+    title = glue::glue("Cumulative dataset downloads: {sum(df_viz$n)}")
   ) +
   facet_wrap(~dataset_title, scales = "free_y") +
   theme(
@@ -1237,7 +1236,8 @@ df_viz |>
     axis.ticks = element_blank(),
     panel.grid = element_blank(),
     panel.background = element_rect(fill = "#3c3c3c"),
-    plot.background = element_rect(fill = "#3c3c3c")
+    plot.background = element_rect(fill = "#3c3c3c"),
+    plot.title = element_text(size = 18, hjust = 0.5, color = "white")
   )
 ```
 
