@@ -263,3 +263,14 @@ div.reveal div.slides section.quarto-title-block .subtitle {
 .reveal .quarto-title-block .quarto-title-authors .quarto-title-author {
   color: #6f6f6f;
 }
+
+/* Image on the top right corner */
+.reveal .top-right-img {
+  position: absolute;
+  top: -1em;
+  right: 1em;
+  width: 350px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+}

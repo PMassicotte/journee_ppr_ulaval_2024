@@ -197,7 +197,7 @@ Ideally, the chosen file format should have these characteristics:
 
 2. **Unencrypted**: [unless it contains personal or sensitive data.]{.emphasize}
 
-3. **Human-readable**: the file should be human-readable [or have open source tools]{.emphasize} available for reading and writing.
+3. **Human-readable**: the file should be human-readable [or have open source tools available for reading and writing]{.emphasize}.
 
 4. **Performance**: consideration for efficient read and write operations, especially for large datasets, is crucial for optimal performance.
 
@@ -219,6 +219,8 @@ All these file formats can be opened using a simple text editor.
 
 <!-- Screenshots made using maim -->
 <!-- maim ~/Desktop/penguins_tsv_format.png -g 1300x725+4070+210 -->
+
+![](img/artwork/lter_penguins.png){fig-alt="The Palmer penguin representation by Allison Horst. The image shows three penguins: Adelie, Chinstrap, and Gentoo." .top-right-img}
 
 This dataset contains 4 variables (columns). [The first line generally includes the names of the variables.]{.emphasize}
 
@@ -243,12 +245,10 @@ This dataset contains 4 variables (columns). [The first line generally includes 
 ::::
 
 ::: aside
-Data source: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. [https://allisonhorst.github.io/palmerpenguins/](https://allisonhorst.github.io/palmerpenguins/)
+Data source: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. [https://allisonhorst.github.io/palmerpenguins/](https://allisonhorst.github.io/palmerpenguins/) Artwork by @allison_horst.
 :::
 
 ## Common open-source geographic file formats
-
-::: {.medium}
 
 These files contain information on geographic features such as [points, lines or polygons]{.emphasize}. There are a ton of [geographical file formats](https://gisgeography.com/gis-formats/), but here are some that are particularly popular.
 
@@ -256,17 +256,13 @@ These files contain information on geographic features such as [points, lines or
 
 - ESRI shapefile (`.SHP`)
 
-  - Technically, the shapefile format is not open. [It is however widely used and often considered the standard]{.emphasize}.
-
-- The GeoPackage format (`.gpkg`) [is an interesting open format](https://geocompr.robinlovelace.net/read-write.html?q=geopack#file-formats).
+  - Technically, the shapefile format is not open. [It is however widely used.]{.emphasize}
 
 - GeoJSON (`.json`, `.geojson`, JSON variant with simple geographical features)
 
 - GeoTIFF (`.tif`, `.tiff`, TIFF variant enriched with GIS relevant metadata)
 
 - GeoParquet (`.parquet`) is an [Open Geospatial Consortium (OGC) standard](https://geoparquet.org/) standard that adds interoperable geospatial types (Point, Line, Polygon) to [Apache Parquet](https://parquet.apache.org/).
-
-:::
 
 :::
 
@@ -586,6 +582,9 @@ There are a few rules to adopt when naming files:
 
 This will ensure that the files are recognized by most operating systems and software.
 
+- [{{< fa check >}}]{style="color: #34A74BFF;"} `meeting_notes_jan2023.docx`
+- [{{< fa times >}}]{style="color: #E6352FFF;"} `meeting notes(jan2023).docx`
+
 ## File naming basic rules
 
 For sequential numbering, [use leading zeros to ensure files sort properly.]{.emphasize}
@@ -656,6 +655,8 @@ Original image from Bhandari Neupane, J. et al. Characterization of Leptazolines
 :::
 
 ## File naming basic rules (examples)
+
+_Imagine that you have to create a file containing temperature data from a weather station._
 
 ::: {.incremental}
 
@@ -875,23 +876,23 @@ Do not be that person 😩😖😠😤😣🤦‍♀️🤦‍♂️😑😓
 
 - Explicitly state the unit of each variable:
 
-  - `depth_m`, `area_km2`, `distance_km`, `wind_speed_m_s`
+  - `depth_m`, `area_km2`, `distance_km`, `wind_speed_ms`
 
 - Be consistent with variable names across files:
 
   - `temp` vs `temperature`
-
-- Do not use special characters or spaces (same as for file names).
+  - `user_name` vs `username`
+  - `last_updated` vs `updated_at`
 
 :::
 
 ## Variable names
 
-Why using special characters and spaces is a bad idea.
+Do not use special characters or spaces (same as for file names).
 
 ::: {.center-align}
 
-![](img/screenshots/invalid_multibyte_string.png){width=80% fig-alt="Screenshot showing an error message in R when trying to read a file with a special character."}
+![](img/screenshots/invalid_multibyte_string.png){width=70% fig-alt="Screenshot showing an error message in R when trying to read a file with a special character."}
 
 :::
 
@@ -902,6 +903,12 @@ r$> read_csv("myfile.csv")
 Rows: 104937 Columns: 1
 Error in nchar(x, "width") : invalid multibyte string, element 1
 ```
+
+::: aside
+
+Note the cells with more than one value in the column. This is a common issue when data is not tidy.
+
+:::
 
 ## Missing values
 
@@ -1035,7 +1042,7 @@ An archive is a copy of data created for reference purposes. **Although not requ
 
 - Google Drive
 
-- Microsoft OneDrive (1TB of space if a student at Université Laval)
+- Microsoft OneDrive (1TB of space if working at Laval University)
 
 - Dropbox
 
@@ -1089,7 +1096,7 @@ I keep three months of data at three different locations:
 
 - Backups of the source code used to generate data are also important.
 
-- Git is a version control system used to keep track of changes in computer files.
+- [Git is a version control system]{.emphasize} used to keep track of changes in computer files.
 
   - Primarily used for source code management in software development.
   - Coordinating work on those files among multiple people.
@@ -1125,11 +1132,11 @@ Many journals and [funding agencies](http://www.science.gc.ca/eic/site/063.nsf/f
 
 ## Publishing your data
 
-There are at least two different ways to make your data available:
+The traditional way to publish data is to include it as supplementary information with your paper.
 
-1. In a dedicated data paper.
+- In an appendix along with your paper ([assuming that your paper is published in an open-access journal]{.emphasize}).
+- [Data presented in an appendix are rarely reviewed by peers.]{.emphasize}
 
-2. In an appendix along with your paper ([assuming that your paper is published in an open-access journal]{.emphasize}).
 
 [The Directory of Open Access Journals](https://www.doaj.org/) is useful for searching for open access journals.
 
@@ -1153,7 +1160,8 @@ You should rather provide the data in a way that is easily importable into a pro
 
 ## What is a data paper?
 
-- [Data presented in an appendix are rarely reviewed by peers.]{.emphasize}
+Another way to publish data is to write a data paper.
+
 - Data papers are interesting alternatives to publish data:
 
   - [Peer-reviewed]{.emphasize} (high-quality data, in theory!).
