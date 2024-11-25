@@ -520,7 +520,7 @@
 <ol type="1">
 <li class="fragment"><p><strong>Non-proprietary</strong>: open source.</p></li>
 <li class="fragment"><p><strong>Unencrypted</strong>: <span class="emphasize">unless it contains personal or sensitive data.</span></p></li>
-<li class="fragment"><p><strong>Human-readable</strong>: the file should be human-readable <span class="emphasize">or have open source tools</span> available for reading and writing.</p></li>
+<li class="fragment"><p><strong>Human-readable</strong>: the file should be human-readable <span class="emphasize">or have open source tools available for reading and writing</span>.</p></li>
 <li class="fragment"><p><strong>Performance</strong>: consideration for efficient read and write operations, especially for large datasets, is crucial for optimal performance.</p></li>
 </ol>
 </div>
@@ -539,6 +539,7 @@
 <h2>Examples of CSV and TSV files</h2>
 <!-- Screenshots made using maim -->
 <!-- maim ~/Desktop/penguins_tsv_format.png -g 1300x725+4070+210 -->
+<p><img data-src="img/artwork/lter_penguins.png" class="top-right-img" alt="The Palmer penguin representation by Allison Horst. The image shows three penguins: Adelie, Chinstrap, and Gentoo."></p>
 <p>This dataset contains 4 variables (columns). <span class="emphasize">The first line generally includes the names of the variables.</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -550,24 +551,21 @@
 </div></div>
 
 <aside><div>
-<p>Data source: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. <a href="https://allisonhorst.github.io/palmerpenguins/">https://allisonhorst.github.io/palmerpenguins/</a></p>
+<p>Data source: Horst AM, Hill AP, Gorman KB (2020). palmerpenguins: Palmer Archipelago (Antarctica) penguin data. R package version 0.1.0. <a href="https://allisonhorst.github.io/palmerpenguins/">https://allisonhorst.github.io/palmerpenguins/</a> Artwork by <span class="citation" data-cites="allison_horst">@allison_horst</span>.</p>
 </div></aside></section>
 <section id="common-open-source-geographic-file-formats" class="slide level2">
 <h2>Common open-source geographic file formats</h2>
-<div class="medium">
 <p>These files contain information on geographic features such as <span class="emphasize">points, lines or polygons</span>. There are a ton of <a href="https://gisgeography.com/gis-formats/">geographical file formats</a>, but here are some that are particularly popular.</p>
 <div>
 <ul>
 <li class="fragment"><p>ESRI shapefile (<code>.SHP</code>)</p>
 <ul>
-<li class="fragment">Technically, the shapefile format is not open. <span class="emphasize">It is however widely used and often considered the standard</span>.</li>
+<li class="fragment">Technically, the shapefile format is not open. <span class="emphasize">It is however widely used.</span></li>
 </ul></li>
-<li class="fragment"><p>The GeoPackage format (<code>.gpkg</code>) <a href="https://geocompr.robinlovelace.net/read-write.html?q=geopack#file-formats">is an interesting open format</a>.</p></li>
 <li class="fragment"><p>GeoJSON (<code>.json</code>, <code>.geojson</code>, JSON variant with simple geographical features)</p></li>
 <li class="fragment"><p>GeoTIFF (<code>.tif</code>, <code>.tiff</code>, TIFF variant enriched with GIS relevant metadata)</p></li>
 <li class="fragment"><p>GeoParquet (<code>.parquet</code>) is an <a href="https://geoparquet.org/">Open Geospatial Consortium (OGC) standard</a> standard that adds interoperable geospatial types (Point, Line, Polygon) to <a href="https://parquet.apache.org/">Apache Parquet</a>.</p></li>
 </ul>
-</div>
 </div>
 </section>
 <section id="the-geojson-format-polygons" class="slide level2">
@@ -1159,6 +1157,10 @@
 <li>No spaces.</li>
 </ul>
 <p>This will ensure that the files are recognized by most operating systems and software.</p>
+<ul>
+<li><span style="color: #34A74BFF;"><i class="fa-solid fa-check" aria-label="check"></i></span> <code>meeting_notes_jan2023.docx</code></li>
+<li><span style="color: #E6352FFF;"><i class="fa-solid fa-times" aria-label="times"></i></span> <code>meeting notes(jan2023).docx</code></li>
+</ul>
 </section>
 <section id="file-naming-basic-rules-1" class="slide level2">
 <h2>File naming basic rules</h2>
@@ -1219,6 +1221,7 @@
 </section>
 <section id="file-naming-basic-rules-examples" class="slide level2">
 <h2>File naming basic rules (examples)</h2>
+<p><em>Imagine that you have to create a file containing temperature data from a weather station.</em></p>
 <div>
 <ul>
 <li class="fragment"><p><span style="color: #E6352FFF;"><i class="fa-solid fa-times" aria-label="times"></i></span> <code>data.csv</code> (not descriptive enough)</p></li>
@@ -1392,28 +1395,32 @@
 </ul></li>
 <li class="fragment"><p>Explicitly state the unit of each variable:</p>
 <ul>
-<li class="fragment"><code>depth_m</code>, <code>area_km2</code>, <code>distance_km</code>, <code>wind_speed_m_s</code></li>
+<li class="fragment"><code>depth_m</code>, <code>area_km2</code>, <code>distance_km</code>, <code>wind_speed_ms</code></li>
 </ul></li>
 <li class="fragment"><p>Be consistent with variable names across files:</p>
 <ul>
 <li class="fragment"><code>temp</code> vs <code>temperature</code></li>
+<li class="fragment"><code>user_name</code> vs <code>username</code></li>
+<li class="fragment"><code>last_updated</code> vs <code>updated_at</code></li>
 </ul></li>
-<li class="fragment"><p>Do not use special characters or spaces (same as for file names).</p></li>
 </ul>
 </div>
 </section>
 <section id="variable-names-3" class="slide level2">
 <h2>Variable names</h2>
-<p>Why using special characters and spaces is a bad idea.</p>
+<p>Do not use special characters or spaces (same as for file names).</p>
 <div class="center-align">
-<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:80.0%" alt="Screenshot showing an error message in R when trying to read a file with a special character."></p>
+<p><img data-src="img/screenshots/invalid_multibyte_string.png" style="width:70.0%" alt="Screenshot showing an error message in R when trying to read a file with a special character."></p>
 </div>
 <div class="fragment">
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>r<span class="sc">$</span><span class="er">&gt;</span> <span class="fu">read_csv</span>(<span class="st">"myfile.csv"</span>)</span>
 <span id="cb2-2"><a href=""></a>Rows<span class="sc">:</span> <span class="dv">104937</span> Columns<span class="sc">:</span> <span class="dv">1</span></span>
 <span id="cb2-3"><a href=""></a>Error <span class="cf">in</span> <span class="fu">nchar</span>(x, <span class="st">"width"</span>) <span class="sc">:</span> invalid multibyte string, element <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
 </div>
-</section>
+<aside><div>
+<p>Note the cells with more than one value in the column. This is a common issue when data is not tidy.</p>
+</div></aside></section>
 <section id="missing-values" class="slide level2">
 <h2>Missing values</h2>
 <div>
@@ -1510,7 +1517,7 @@
 <li class="fragment"><p><span style="color: #E6352FFF;"><i class="fa-solid fa-exclamation-triangle" aria-label="exclamation-triangle"></i></span> A copy of your working directory in another directory on the same hard drive is not redundancy!</p></li>
 <li class="fragment"><p>Backups should not be only done on your computer (use cloud services).</p></li>
 <li class="fragment"><p>Google Drive</p></li>
-<li class="fragment"><p>Microsoft OneDrive (1TB of space if a student at Université Laval)</p></li>
+<li class="fragment"><p>Microsoft OneDrive (1TB of space if working at Laval University)</p></li>
 <li class="fragment"><p>Dropbox</p></li>
 </ul>
 </div>
@@ -1578,7 +1585,7 @@
 <h2>Source code management</h2>
 <ul>
 <li><p>Backups of the source code used to generate data are also important.</p></li>
-<li><p>Git is a version control system used to keep track of changes in computer files.</p>
+<li><p><span class="emphasize">Git is a version control system</span> used to keep track of changes in computer files.</p>
 <ul>
 <li>Primarily used for source code management in software development.</li>
 <li>Coordinating work on those files among multiple people.</li>
@@ -1612,11 +1619,11 @@
 </section>
 <section id="publishing-your-data-2" class="slide level2">
 <h2>Publishing your data</h2>
-<p>There are at least two different ways to make your data available:</p>
-<ol type="1">
-<li><p>In a dedicated data paper.</p></li>
-<li><p>In an appendix along with your paper (<span class="emphasize">assuming that your paper is published in an open-access journal</span>).</p></li>
-</ol>
+<p>The traditional way to publish data is to include it as supplementary information with your paper.</p>
+<ul>
+<li>In an appendix along with your paper (<span class="emphasize">assuming that your paper is published in an open-access journal</span>).</li>
+<li><span class="emphasize">Data presented in an appendix are rarely reviewed by peers.</span></li>
+</ul>
 <p><a href="https://www.doaj.org/">The Directory of Open Access Journals</a> is useful for searching for open access journals.</p>
 <img data-src="img/logo/doaj_logo.png" class="r-stretch" alt="Directory of Open Access Journals logo. The logo has three shapes on the left side and the text 'DOAJ' on the right side.">
 </section>
@@ -1634,8 +1641,8 @@
 </section>
 <section id="what-is-a-data-paper" class="slide level2">
 <h2>What is a data paper?</h2>
+<p>Another way to publish data is to write a data paper.</p>
 <ul>
-<li><p><span class="emphasize">Data presented in an appendix are rarely reviewed by peers.</span></p></li>
 <li><p>Data papers are interesting alternatives to publish data:</p>
 <ul>
 <li><span class="emphasize">Peer-reviewed</span> (high-quality data, in theory!).</li>
