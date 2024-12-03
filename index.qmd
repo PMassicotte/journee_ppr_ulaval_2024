@@ -1020,7 +1020,7 @@ A backup is a copy of data created to restore said data in case of damage or los
 
 **The series of managed activities necessary to ensure continued access to digital materials for as long as necessary.** Digital preservation is defined very broadly and refers to all of the actions required to maintain access to digital materials beyond the limits of media failure or technological change.
 
-Those materials may be records created during the day-to-day business of an organization; 'born-digital' materials created for a specific purpose(e.g., teaching resources); or the products of digitization projects. This definition specifically excludes the potential use of digital technology to preserve the original artifacts through digitization.[^2]
+Those materials may be records created during the day-to-day business of an organization; 'born-digital' materials created for a specific purpose(e.g., teaching resources); or the products of digitization projects. This definition specifically excludes the potential use of digital technology to preserve the original artefacts through digitization.[^2]
 
 :::
 
